@@ -35,4 +35,22 @@ return [
         ],
     ],
 
+    'google' => [
+        'client_id' => env('GOOGLE_CLIENT_ID'),
+        'client_secret' => env('GOOGLE_CLIENT_SECRET'),
+        'redirect' => env('GOOGLE_REDIRECT_URI'),
+    ],
+
+    'github' => [
+        'client_id' => env('GITHUB_LOGIN_CLIENT_ID'),
+        'client_secret' => env('GITHUB_LOGIN_CLIENT_SECRET'),
+        'redirect' => env('GITHUB_LOGIN_REDIRECT_URI'),
+    ],
+
+    'github_product' => [
+        'client_id' => env('GITHUB_PRODUCT_CLIENT_ID'),
+        'client_secret' => env('GITHUB_PRODUCT_CLIENT_SECRET'),
+        'redirect' => env('GITHUB_PRODUCT_REDIRECT_URI'),
+    ],
+
 ];

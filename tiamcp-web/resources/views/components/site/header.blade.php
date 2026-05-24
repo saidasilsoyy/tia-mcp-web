@@ -13,7 +13,11 @@
             <a class="tmcp-nav-link tmcp-focus" href="{{ route('public.security') }}">Security</a>
             <a class="tmcp-nav-link tmcp-focus" href="{{ route('public.pricing') }}">Pricing</a>
             <a class="tmcp-nav-link tmcp-focus" href="{{ route('public.docs') }}">Docs</a>
-            <a class="tmcp-nav-link tmcp-focus" href="{{ route('auth.login') }}">Sign in</a>
+            @auth
+                <a class="tmcp-nav-link tmcp-focus" href="{{ route('account.dashboard') }}">Account</a>
+            @else
+                <a class="tmcp-nav-link tmcp-focus" href="{{ route('auth.login') }}">Sign in</a>
+            @endauth
             <a class="tmcp-button tmcp-button-primary tmcp-focus" href="{{ route('public.download') }}">Download for Windows</a>
         </nav>
 
@@ -30,7 +34,11 @@
         <a class="tmcp-mobile-link tmcp-focus" href="{{ route('public.security') }}">Security</a>
         <a class="tmcp-mobile-link tmcp-focus" href="{{ route('public.pricing') }}">Pricing</a>
         <a class="tmcp-mobile-link tmcp-focus" href="{{ route('public.docs') }}">Docs</a>
-        <a class="tmcp-mobile-link tmcp-focus" href="{{ route('auth.login') }}">Sign in</a>
+        @auth
+            <a class="tmcp-mobile-link tmcp-focus" href="{{ route('account.dashboard') }}">Account</a>
+        @else
+            <a class="tmcp-mobile-link tmcp-focus" href="{{ route('auth.login') }}">Sign in</a>
+        @endauth
         <a class="tmcp-button tmcp-button-primary tmcp-focus mt-3 w-full" href="{{ route('public.download') }}">Download for Windows</a>
     </nav>
 </header>

@@ -17,8 +17,12 @@
                     <p class="tmcp-kicker">Account</p>
                     <nav class="mt-4 grid gap-2 text-sm font-semibold text-slate-700">
                         <a class="tmcp-focus rounded px-3 py-2 hover:bg-white" href="{{ route('account.dashboard') }}">Overview</a>
-                        <a class="tmcp-focus rounded px-3 py-2 hover:bg-white" href="{{ route('device.activation') }}">Devices</a>
-                        <a class="tmcp-focus rounded px-3 py-2 hover:bg-white" href="{{ url('/account/github') }}">GitHub connection</a>
+                        <a class="tmcp-focus rounded px-3 py-2 hover:bg-white" href="{{ route('account.devices.index') }}">Devices</a>
+                        <a class="tmcp-focus rounded px-3 py-2 hover:bg-white" href="{{ route('account.github.show') }}">GitHub connection</a>
+                        <form method="POST" action="{{ route('auth.logout') }}">
+                            @csrf
+                            <button class="tmcp-focus w-full rounded px-3 py-2 text-left hover:bg-white" type="submit">Sign out</button>
+                        </form>
                     </nav>
                 </aside>
 

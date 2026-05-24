@@ -9,6 +9,7 @@ class HealthController extends Controller
     public function __invoke(): JsonResponse
     {
         return response()->json([
+            'ok' => true,
             'status' => 'ok',
             'service' => 'tiamcp-web',
             'version' => config('tiamcp.public_build_version'),

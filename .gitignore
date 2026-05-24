@@ -1,0 +1,6 @@
+﻿node_modules/
+tiamcp-web/node_modules/
+tiamcp-web/tests/
+tiamcp-web/.phpunit.result.cache
+tiamcp-web/storage/logs/*.log
+tiamcp-web/.env

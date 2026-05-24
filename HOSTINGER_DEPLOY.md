@@ -20,9 +20,14 @@ DB_PORT=3306
 DB_DATABASE=HOSTINGER_DATABASE_NAME
 DB_USERNAME=HOSTINGER_DATABASE_USER
 DB_PASSWORD=ROTATED_HOSTINGER_DATABASE_PASSWORD
+
+ENTITLEMENT_SIGNING_KEY_ID=hostinger-production
+ENTITLEMENT_SIGNING_ALG=HS256
+ENTITLEMENT_SIGNING_SECRET=base64:GENERATE_A_RANDOM_SIGNING_SECRET
 ```
 
 Hostinger database names and usernames are usually prefixed. Use the exact full values shown in hPanel, not shortened local names.
+For this shared-hosting deployment, HS256 is used so no private key file has to be stored on the server.
 
 ## First Deploy Commands
 

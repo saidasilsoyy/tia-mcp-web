@@ -1,9 +1,0 @@
-# Auto detect text files and perform LF normalization
-* text=auto
-
-.env -diff
-.env.* -diff
-.env.example diff
-tiamcp-web/.env -diff
-tiamcp-web/.env.* -diff
-tiamcp-web/.env.example diff
